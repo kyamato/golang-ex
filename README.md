@@ -63,7 +63,15 @@ $ oc logs -f bc/beego-example
 
 If you have the OpenShift router running, you should be able to access the
 application just by typing the beego-example route DNS
-(beego-example.openshiftapps.com) into your browser. However, you will have to
+(beego-example.openshiftapps.com) into your browser.
+
+======
+
+For this sake, I have modified `openshift/templates/beego.json` for choosing APPLICATION_DOMAIN as openshift default host string.
+
+======
+
+However, you will have to
 run you own DNS server first, but we can cheat it by modifying the `/etc/hosts`
 file on your host machine. Just append this line at the end of that file:
 
